@@ -1,0 +1,24 @@
+- entity = f        if f.present? && f.is_a?(ActiveRecord::Base)
+- entity = f.object if f.present? && entity.nil? && f.object.is_a?(ActiveRecord::Base)
+- if entity && entity.persisted? && current_user && current_user.try(:super_admin)
+  .field
+    = label_tag 'Creado por'
+    %span= entity.created_by.try(:full_name)
+  .field
+    = label_tag 'Creado el'
+    %span= format_datetime(entity.created_at)
+    /span= f.object.created_at
+  .field
+    = label_tag 'Actualizado por'
+    %span= entity.updated_by.try(:full_name)
+  .field
+    = label_tag 'Actualizado el'
+    %span= format_datetime(entity.updated_at)
+  - unless entity.deleted_at.nil?
+    #deleted_row
+      .field
+        = label_tag 'Borrado por'
+        = entity.deleted_by.try(:full_name)
+      .field
+        = label_tag 'Borrado el'
+        = format_datetime(entity.deleted_at)

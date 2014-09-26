@@ -1,0 +1,14 @@
+= form_for [@company, @customer] do |f|
+  = render 'shared/error_handler', :errors => @customer.errors
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :image_path
+    = f.text_field :image_path
+  .field
+    = f.label :notes
+    = f.text_area :notes
+  .actions
+    = f.submit 'Save'

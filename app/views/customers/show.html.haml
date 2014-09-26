@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @customer.name
+%p
+  %b Image path:
+  = @customer.image_path
+%p
+  %b Created by:
+  = @customer.created_by_id
+%p
+  %b Created at:
+  = @customer.created_at
+%p
+  %b Updated by:
+  = @customer.updated_by_id
+%p
+  %b Updated at:
+  = @customer.updated_at
+%p
+  %b Deleted by:
+  = @customer.deleted_by_id
+%p
+  %b Deleted at:
+  = @customer.deleted_at
+%p
+  %b Notes:
+  = @customer.notes
+
+= link_to 'Edit', edit_customer_path(@customer)
+\|
+= link_to 'Back', customers_path

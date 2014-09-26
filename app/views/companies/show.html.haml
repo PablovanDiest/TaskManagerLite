@@ -1,0 +1,131 @@
+#dashboard
+  #left_panel
+    #panel1.rounded
+      .center
+        %h2
+          Customers
+      = link_to t('scaffold.actions.new', :item => Customer.model_name), '#', :class => 'newCustomer'
+      %table.list.rounded
+        %thead
+          %tr
+            %th Name
+            %th
+        %tbody
+          - @customers.each do |customer|
+            %tr
+              %td= customer.name
+              %td
+                /= link_to 'Show', [@company, customer]
+                = link_to 'Edit', edit_company_customer_path(@company, customer)
+                = link_to 'Destroy', [@company, customer], :method => :delete, :data => { :confirm => 'Are you sure?' }
+    #panel2.rounded
+      .center
+        %h2
+          Projects
+      = link_to t('scaffold.actions.new', :item => Project.model_name), '#', :class => 'newProject'
+      %table.list.rounded
+        %thead
+          %tr
+            %th Name
+            %th
+        %tbody
+          - @projects.each do |project|
+            %tr
+              %td= project.name
+              %td
+                = link_to 'Edit', edit_company_project_path(@company, project)
+                = link_to 'Destroy', [@company, project], :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+  #right_panel
+    %h2
+      Tasks
+
+    %table.list.rounded
+      %thead
+        %tr
+          %th Name
+          %th Customer
+          %th Project
+          %th Design document
+          %th From
+          %th Until
+          %th Elapsed Time
+          %th Case
+          %th
+
+      %tbody
+        - @tasks.each do |task|
+          %tr
+            %td= task.name
+            %td= task.customer.try(:name)
+            %td= task.project.try(:name)
+            %td= task.design_document
+            %td= format_datetime(task.from)
+            %td= format_datetime(task.until)
+            %td= ((task.until - task.from) / 60).to_i
+            %td= task.case
+            %td
+              / link_to 'Show', [@company, task]
+              = link_to 'Edit', edit_company_task_path(@company, task)
+              = link_to 'Destroy', [@company, task], :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+    %br
+
+    = link_to 'New Task', '#', :class => 'btn newTask'
+
+#overlay
+  .formTask.hiddenForm.hide
+    = render 'tasks/form'
+  .formCustomer.hiddenForm.hide
+    = render 'customers/form'
+  .formProject.hiddenForm.hide
+    = render 'projects/form'
+
+:javascript
+  $(document).ready(function(){
+    $('.newTask').click(function() {
+      $('.formTask').overlay().load();
+    });
+    $('.newCustomer').click(function() {
+      $('.formCustomer').overlay().load();
+    });
+    $('.newProject').click(function() {
+      $('.formProject').overlay().load();
+    });
+
+    $('.hiddenForm').overlay({
+      // custom top position
+      top: 20,
+      // some mask tweaks suitable for facebox-looking dialogs
+      mask: {
+        // you might also consider a "transparent" color for the mask
+        color: '#000',
+        // load mask a little faster
+        loadSpeed: 200,
+        // very transparent
+        opacity: .7
+      },
+      // disable this for modal dialog-type of overlays
+      closeOnClick: true,
+      // load it immediately after the construction
+      load: false
+    });
+
+    $('sss.formCustomer').overlay({
+      // custom top position
+      top: 20,
+      // some mask tweaks suitable for facebox-looking dialogs
+      mask: {
+        // you might also consider a "transparent" color for the mask
+        color: '#000',
+        // load mask a little faster
+        loadSpeed: 200,
+        // very transparent
+        opacity: .7
+      },
+      // disable this for modal dialog-type of overlays
+      closeOnClick: true,
+      // load it immediately after the construction
+      load: false
+    });
+  });

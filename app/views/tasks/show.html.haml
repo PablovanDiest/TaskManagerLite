@@ -1,0 +1,54 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @task.name
+%p
+  %b Company:
+  = @task.company
+%p
+  %b Project:
+  = @task.project
+%p
+  %b Company:
+  = @task.company
+%p
+  %b Design document:
+  = @task.design_document
+%p
+  %b From:
+  = @task.from
+%p
+  %b Until:
+  = @task.until
+%p
+  %b Case:
+  = @task.case
+%p
+  %b Case link:
+  = @task.case_link
+%p
+  %b Created by:
+  = @task.created_by_id
+%p
+  %b Created at:
+  = @task.created_at
+%p
+  %b Updated by:
+  = @task.updated_by_id
+%p
+  %b Updated at:
+  = @task.updated_at
+%p
+  %b Deleted by:
+  = @task.deleted_by_id
+%p
+  %b Deleted at:
+  = @task.deleted_at
+%p
+  %b Notes:
+  = @task.notes
+
+= link_to 'Edit', edit_task_path(@task)
+\|
+= link_to 'Back', tasks_path

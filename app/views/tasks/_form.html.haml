@@ -1,0 +1,29 @@
+= form_for [@company, @task] do |f|
+  = render 'shared/error_handler', :errors => @task.errors
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :customer_id
+    = f.collection_select :customer_id, Customer.all, :id, :name, {}, {:class => 'select'}
+  .field
+    = f.label :project_id
+    = f.collection_select :project_id, Project.all, :id, :name, {}, {:class => 'select'}
+  .field
+    = f.label :design_document
+    = f.text_field :design_document
+  .field
+    = f.label :from
+    = f.datetime_select :from
+  .field
+    = f.label :until
+    = f.datetime_select :until
+  .field
+    = f.label :case
+    = f.text_field :case
+  .field
+    = f.label :notes
+    = f.text_area :notes
+  .actions.center
+    = f.submit 'Save'

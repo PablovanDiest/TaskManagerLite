@@ -1,0 +1,18 @@
+%h1 Listing customers
+
+%table.list
+  %tr
+    %th Name
+    %th.actions
+
+  - @customers.each do |customer|
+    %tr
+      %td= customer.name
+      %td.actions
+        = link_to 'Show', customer
+        = link_to 'Edit', edit_customer_path(customer)
+        = link_to 'Destroy', customer, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Customer', new_customer_path

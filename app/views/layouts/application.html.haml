@@ -1,0 +1,57 @@
+!!! 5
+- title = "#{t('application.short_name')} - #{t('application.long_name')} #{(current_user ? '>> ' + (current_user ? current_user.company.try(:name) : '') : '')}"
+%html
+  %head
+    %title= title
+    /= yield :meta
+    /= favicon_link_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    /= grid_stylesheet_tag
+    = javascript_include_tag 'application', 'data-turbolinks-track' => false
+    /= javascript_include_tag 'http://cdn.jquerytools.org/1.2.6/tiny/jquery.tools.min.js'
+    = csrf_meta_tags
+    = yield :head
+  %body
+    #header
+      #logo-header
+        = title
+      .nav-header-wrapper
+        /= link_to 'Login', '#', :class => 'btn', :onclick => 'return ShowLogin();'
+        - if current_user
+          = link_to "Cerrar sesión #{current_user.email}", destroy_user_session_path, :method => :delete, :class => 'close-session'
+    /- if current_user
+    /= render 'shared/main_menu'
+    /- else
+    /  = "..."
+    #content
+      - flash.each do |f|
+        .flash
+          - if f[0] == :alert
+            .warning
+              %span= f[1]
+          - if f[0] == :error
+            .error
+              %span= f[1]
+          - if f[0] == :message || f[0] == :notice
+            .message
+              %span= f[1]
+          - if f[0] == :warning
+            .warning
+              %span= f[1]
+      = yield
+    #footer
+      #footermessage.center
+        = t('application.designed_by')
+
+:javascript
+  $(document).ready(function(){
+    if ("#{current_user && current_user.try(:super_admin)}" == "false"){
+      $('form').submit(function(event){
+        var saveMessage = $('#save_message').text();
+        if (saveMessage == null){
+           saveMessage = '';
+        }
+        return confirm('¿Esta seguro que desea grabar '  + saveMessage + '?');
+      });
+    }
+  });

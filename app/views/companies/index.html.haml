@@ -1,0 +1,35 @@
+%h1 Listing companies
+
+%table
+  %tr
+    %th Name
+    %th Image path
+    %th Created by
+    %th Created at
+    %th Updated by
+    %th Updated at
+    %th Deleted by
+    %th Deleted at
+    %th Notes
+    %th
+    %th
+    %th
+
+  - @companies.each do |company|
+    %tr
+      %td= company.name
+      %td= company.image_path
+      %td= company.created_by_id
+      %td= company.created_at
+      %td= company.updated_by_id
+      %td= company.updated_at
+      %td= company.deleted_by_id
+      %td= company.deleted_at
+      %td= company.notes
+      %td= link_to 'Show', company
+      %td= link_to 'Edit', edit_company_path(company)
+      %td= link_to 'Destroy', company, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Company', new_company_path

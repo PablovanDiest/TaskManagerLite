@@ -1,0 +1,12 @@
+- if errors.any?
+  #error_explanation.alert-message.error.fade.in.block-message{'data-alert' => 'alert'}
+    #error_title{:style => 'cursor:pointer; border-bottom:2px solid black; margin-right: 8px;', :onclick => "return ShowHideObject('error_content', 'error_explanation', null);"}
+      %a
+        / "#{errors.count} error #{errors.count == 1 ? '' : 's'} impide #{errors.count == 1 ? '' : 'n'} guardar el registro:"
+        = t('scaffold.errors.message')
+        /Se han encontrado errores que impiden la grabacion
+      %a.close{:href => '#', :title => 'Cerrar', :onclick => "return ShowHideObject('error_content', 'error_explanation', null, true);"} &times;
+    %span.error_content
+      %ul
+        - errors.full_messages.each do |msg|
+          %li= msg

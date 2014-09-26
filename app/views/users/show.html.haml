@@ -1,0 +1,48 @@
+%p#notice= notice
+
+%p
+  %b Last name:
+  = @user.last_name
+%p
+  %b First name:
+  = @user.first_name
+%p
+  %b Email:
+  = @user.email
+%p
+  %b Role:
+  = @user.role
+%p
+  %b Super admin:
+  = @user.super_admin
+%p
+  %b Created by:
+  = @user.created_by_id
+%p
+  %b Created at:
+  = @user.created_at
+%p
+  %b Updated by:
+  = @user.updated_by_id
+%p
+  %b Updated at:
+  = @user.updated_at
+%p
+  %b Deleted by:
+  = @user.deleted_by_id
+%p
+  %b Approved at:
+  = @user.approved_at
+%p
+  %b Approved by:
+  = @user.approved_by_id
+%p
+  %b Deleted at:
+  = @user.deleted_at
+%p
+  %b Notes:
+  = @user.notes
+
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path

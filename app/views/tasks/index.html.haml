@@ -1,0 +1,49 @@
+%h1 Listing tasks
+
+%table
+  %tr
+    %th Name
+    %th Company
+    %th Project
+    %th Company
+    %th Design document
+    %th From
+    %th Until
+    %th Case
+    %th Case link
+    %th Created by
+    %th Created at
+    %th Updated by
+    %th Updated at
+    %th Deleted by
+    %th Deleted at
+    %th Notes
+    %th
+    %th
+    %th
+
+  - @tasks.each do |task|
+    %tr
+      %td= task.name
+      %td= task.company
+      %td= task.project
+      %td= task.company
+      %td= task.design_document
+      %td= task.from
+      %td= task.until
+      %td= task.case
+      %td= task.case_link
+      %td= task.created_by_id
+      %td= task.created_at
+      %td= task.updated_by_id
+      %td= task.updated_at
+      %td= task.deleted_by_id
+      %td= task.deleted_at
+      %td= task.notes
+      %td= link_to 'Show', task
+      %td= link_to 'Edit', edit_task_path(task)
+      %td= link_to 'Destroy', task, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Task', new_task_path

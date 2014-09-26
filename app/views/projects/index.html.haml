@@ -1,0 +1,39 @@
+%h1 Listing projects
+
+%table
+  %tr
+    %th Name
+    %th Company
+    %th File path
+    %th File name
+    %th Created by
+    %th Created at
+    %th Updated by
+    %th Updated at
+    %th Deleted by
+    %th Deleted at
+    %th Notes
+    %th
+    %th
+    %th
+
+  - @projects.each do |project|
+    %tr
+      %td= project.name
+      %td= project.company
+      %td= project.file_path
+      %td= project.file_name
+      %td= project.created_by_id
+      %td= project.created_at
+      %td= project.updated_by_id
+      %td= project.updated_at
+      %td= project.deleted_by_id
+      %td= project.deleted_at
+      %td= project.notes
+      %td= link_to 'Show', project
+      %td= link_to 'Edit', edit_project_path(project)
+      %td= link_to 'Destroy', project, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Project', new_project_path

@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @project.name
+%p
+  %b Company:
+  = @project.company
+%p
+  %b File path:
+  = @project.file_path
+%p
+  %b File name:
+  = @project.file_name
+%p
+  %b Created by:
+  = @project.created_by_id
+%p
+  %b Created at:
+  = @project.created_at
+%p
+  %b Updated by:
+  = @project.updated_by_id
+%p
+  %b Updated at:
+  = @project.updated_at
+%p
+  %b Deleted by:
+  = @project.deleted_by_id
+%p
+  %b Deleted at:
+  = @project.deleted_at
+%p
+  %b Notes:
+  = @project.notes
+
+= link_to 'Edit', edit_project_path(@project)
+\|
+= link_to 'Back', projects_path

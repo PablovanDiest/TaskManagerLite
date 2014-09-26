@@ -1,0 +1,515 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require devise
+ *= require forms
+*/
+html, body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html input.text, body input.text {
+  background-color: #C9C3E6;
+  border-radius: 3px 3px 3px 3px;
+  font-size: 12px;
+  padding: 7px;
+  margin-bottom: 20px;
+}
+
+body {
+  /*
+    background: url(/assets/fondo1.jpg);
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    no-repeat center center fixed
+    background: none repeat scroll 0 0 #00264d;
+  */
+  margin: 0;;
+  vertical-align: baseline;
+}
+
+body, td, th {
+  font-family: Tahoma;
+  font-size: 12px;
+  font-style: normal;
+}
+
+#header {
+  background-color: #00264d;
+  color: #c7eefe;
+  background-image: linear-gradient(#00264d, #00264d 10%, #c7eefe);
+  transition: 0.1s linear all;
+  /*
+    clear: both;
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
+  */
+  height: 60px;
+}
+
+#logo-header{
+  float: left;
+  font-size: 20px;
+  padding: 20px 0 10px 20px;
+  text-shadow: 1px 1px #00264d, -2px -2px #c7eefe
+}
+
+.nav-header-wrapper{
+  /*
+    background-image: linear-gradient(#00264d, #00264d 10%, #c7eefe);
+    transition: 0.1s linear all;
+  */
+  float: right;
+  padding: 15px 15px 15px;
+  position: relative;
+}
+
+.close-session {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#intro-image{
+  background: url(/assets/fondo1.jpg) no-repeat center center;
+  background-color: #00264d;
+  height: 600px;
+  width: 100%;
+}
+
+#content {
+  /*
+  background: none repeat scroll 0 0 #FFFFFF;
+  clear: both;
+
+  color: #00264d;
+  background-color: #00264d;
+  color: #c7eefe;
+  background-color: #0059B3;
+  float: left;
+  overflow: hidden;
+  */
+  padding-top:  10px;
+  padding-left: 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#dashboard {
+  padding-top:  0;
+  padding-left: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+#left_panel {
+  /*
+  background-color: #f3f3f3;
+  */
+  float: left;
+  position: relative;
+  width: 30%;
+}
+
+#right_panel {
+  /*
+  background-color: #c7eefe;
+  */
+  float: right;
+  position: relative;
+  width: 70%;
+}
+
+#panel1 {
+  /*
+  background-color: #ffd6d6;
+  */
+  margin: 0px 0px 15px 5px;
+  position: relative;
+  width: 96%;
+}
+
+#panel2 {
+  /*
+  background-color: #ffe28a;
+  */
+  margin: 0px 0px 15px 5px;
+  position: absolute;
+  width: 96%;
+}
+
+.rounded {
+  border-radius: 6px;
+  box-shadow: 0 1px 3px #999;
+}
+
+#toolbar{
+  background-color: #00264d;
+  float: left;
+  background-image: linear-gradient(#c7eefe, #c7eefe 0%, #00264d);
+  transition: 0.1s linear all;
+  position: relative;
+  height: 700px;
+  width: 20%;
+  /*
+  background-image: linear-gradient(#00264d, #00264d 20%, #c7eefe);
+  position: absolute;
+  width: 100%;
+  padding-left: 10px;
+  */
+}
+
+#toolbar ul{
+  background-color: #c7eefe;
+  margin: 2px 0px 2px 0px;
+  padding: 0;
+  width: 100%;
+}
+
+#toolbar ul li ul li{
+  /*
+    color: #c7eefe;
+
+    color: #00264d;
+    font-weight: bold;
+    padding: 5px 0px 5px 20px;
+    text-decoration:none;
+    text-shadow: 1px 1px #c7eefe, -1px -1px #00264d
+  */
+  padding: 5px 0px 5px 20px;
+}
+
+#toolbar ul li ul li:hover {
+}
+
+#toolbar ul li ul li a{
+  color: #c7eefe;
+  font-weight: bold;
+  text-decoration:none;
+  text-shadow: 1px 1px #00264d, -1px -1px #c7eefe
+}
+
+.toolbar-title{
+  background-color: #00264d;
+  background-image: linear-gradient(#c7eefe, #c7eefe 0%, #00264d);
+  color: #c7eefe;
+  font-weight: bold;
+  text-shadow: 1px 1px white, -2px -2px #00264d
+}
+
+.toolbar-item{
+  background-color: #c7eefe;
+  cursor: pointer;
+  padding: 5px 0px 5px 20px;
+
+  color: #00264d;
+  font-weight: bold;
+  padding: 5px 0px 5px 20px;
+  text-decoration:none;
+  text-shadow: 1px 1px #c7eefe, -1px -1px #00264d
+  /*
+  color: #00264d;
+  color: #00264d;
+  background-image: linear-gradient(#00264d, #00264d 0%, #c7eefe);
+  font-weight: bold;
+  text-shadow: 1px 1px white, -1px -1px #00264d
+  color: #c7eefe;
+  */
+}
+
+.toolbar-item:hover{
+  background-color: #00264d;
+  color: #c7eefe;
+  text-shadow: 1px 1px #00264d, -1px -1px #c7eefe
+}
+
+.toolbar-item a:hover{
+  color: #c7eefe !important;
+  font-weight: bold;
+}
+
+.pretty_text{
+  color: #c7eefe;
+  font-size: 16px;
+  text-shadow: 1px 1px #00264D, -2px -2px #C7EEFE;
+}
+
+#footer {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-top: 2px solid #000000;
+  float: left;
+  overflow: hidden;
+  padding-top:  10px;
+  padding-left: 10px;
+  margin: 0 auto;
+  width: 79%;
+  width: 100%;
+}
+
+#main_header {
+  height: 110px;
+  width: 90%;
+  padding: 0 0 0 0px;
+  margin: 0 0 0 50px;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(black), to(#666666));
+  background-image: -moz-linear-gradient(top, black, #666666);
+  background-image: -ms-linear-gradient(top, black, #666666);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, #666666));
+  background-image: -webkit-linear-gradient(top, black, #666666);
+  background-image: -o-linear-gradient(top, black, #666666);
+  background-image: linear-gradient(top, #000000, #666666);
+}
+
+.actions {
+  text-align: center;
+}
+
+
+.link_actions {
+  text-align: left;
+  background-color: #00264d;
+}
+
+a { text-decoration: none; }
+a:focus { outline: thin dotted; }
+a:hover, a :active { outline: 0; }
+
+
+.user_navigation {
+  text-align: left;
+  display: block;
+  float: right;
+  width: 70px;
+}
+
+.user_navigation ul {
+  position: relative;
+  padding: 0;
+  height: 30px;
+}
+
+.user_navigation ul li {
+  padding: 0px 2px;
+  margin: 0;
+  list-style: none;
+}
+
+
+/* ----------------------------------------------
+USER NEW
+------------------------------------------------- */
+.user_new label { margin: 12px 10px 0px 0px; }
+.user_new input { margin: 2px 0px 0px 0px; }
+.user_new input[type="checkbox"] { margin: 20px 0px 0px 0px; }
+
+
+/* ----------------------------------------------
+MESSAGES
+------------------------------------------------- */
+.flash {
+  /*
+  background-color: #f7f7f7;
+  width: 99%;
+  */
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.flash .message, .flash.message {
+  background-color: #cbe5c8;
+  border: 1px solid #1fdf00;
+  color: #107a00;
+  padding: 10px;
+}
+
+.flash .notice, .flash.notice {
+  background-color: #BBFFB6;
+  border: 1px solid #1FDF00;
+  color: #1fdf00;
+  padding: 10px;
+}
+
+.flash .success, .flash.success {
+  background-color: #cbe5c8;
+  border: 1px solid #1fdf00;
+  color: #1fdf00;
+  padding: 10px;
+}
+
+.flash .warning, .flash.warning {
+  background-color: #ffffcc;
+  border: 1px solid #ffc824;
+  color: #ff0000;
+  padding: 10px;
+}
+
+.flash .error, .flash .error-list {
+  border: 1px solid #ffbbbb;
+  background-color: #ffe28a;
+}
+
+.flash .error-list {
+  text-align: left;
+}
+
+.flash .error-list h2 {
+  font-size: 16px;
+  text-align: center;
+}
+
+.flash .error-list ul {
+  padding-left: 22px;
+  line-height: 18px;
+  list-style-type: square;
+  margin-bottom: 15px;
+}
+
+input[type="Textbox"] {
+  color: black;
+  font-size: 12px;
+  padding: 2px 0px 0px 5px;
+  text-align: left;
+  width: 300px;
+}
+
+input[type="Textbox"]:hover {
+  background-color: #c3d5d5;
+}
+
+input[type="Textbox"]:focus {
+  background-color: #c3d5d5;
+  border: solid 1px #00264d;
+}
+
+input[type="Textarea"] {
+  color: black;
+  font-size: 12px;
+  padding: 2px 0px 0px 5px;
+  text-align: left;
+  width: 99%;
+}
+
+textarea{
+    /*background-color: #C7EEFE;*/
+}
+
+select {
+  font-size: 12px;
+  padding: 2px 3px 2px 3px;
+  text-align: left;
+}
+
+
+.twipsy {
+  display: block;
+  position: absolute;
+  visibility: visible;
+  padding: 5px;
+  font-size: 11px;
+  z-index: 1000;
+  filter: alpha(opacity=80);
+  -khtml-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+
+.twipsy.fade.in {
+  filter: alpha(opacity=80);
+  -khtml-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+
+.twipsy.above .twipsy-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.twipsy.left .twipsy-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid black;
+}
+
+.twipsy.below .twipsy-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+}
+
+.twipsy.right .twipsy-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid black;
+}
+
+.twipsy-inner {
+  padding: 3px 8px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  max-width: 200px;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.twipsy-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.hide   { display: none; }
+.center { text-align: center; }
+.right  { text-align: right; }
+.bold   { font-weight: bold; }
+
+.text-name{ width: 400px; }
+
+.ColumnWidth20{ width: 20%; }
+.ColumnWidth30{ width: 30%; }
+.ColumnWidth50{ width: 50%; }
+.ColumnWidth60{ width: 60%; }
+.ColumnWidth80{ width: 80%; }
+
+#save_message{
+  display: none;
+}

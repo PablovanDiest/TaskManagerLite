@@ -1,0 +1,17 @@
+rails generate scaffold user last_name:string first_name:string role:string{5} super_admin:boolean created_by_id:integer created_at:datetime updated_by_id:integer updated_at:datetime deleted_by_id:integer approved_at:datetime approved_by_id:integer deleted_at:datetime notes:text
+rails generate devise:install
+rails generate devise user
+rails generate devise:views
+
+rails generate scaffold company  name:string image_path:string created_by_id:integer created_at:datetime updated_by_id:integer updated_at:datetime deleted_by_id:integer deleted_at:datetime notes:text
+rails generate scaffold customer name:string company:references created_by_id:integer created_at:datetime updated_by_id:integer updated_at:datetime deleted_by_id:integer deleted_at:datetime notes:text
+rails generate scaffold project  name:string company:references file_path:string file_name:string created_by_id:integer created_at:datetime updated_by_id:integer updated_at:datetime deleted_by_id:integer deleted_at:datetime notes:text
+rails generate scaffold task     name:string company:references project:references company:references design_document:string from:datetime until:datetime case:string case_link:string  created_by_id:integer created_at:datetime updated_by_id:integer updated_at:datetime deleted_by_id:integer deleted_at:datetime notes:text
+
+
+
+- Al crear un nuevo usuario, se debe crear un nuevo cliente
+- Un nuevo usuario que quiere entrar a una empresa existente, hasta no estar APROBADO es GUEST (solo realiza consultas)
+- Solo un usuario ADMIN puede aprobar a un GUEST y pasarlo a USER
+- El usuario ADMIN principal no puede bajar su nivel y es el que figura como created_by_id en CUSTOMER
+
