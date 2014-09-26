@@ -1,0 +1,20 @@
+es-AR:
+  activerecord:
+    models:
+      user: Usuario
+    attributes:
+      user:
+        first_name: Nombre
+        last_name: Apellido
+        reset_password_token: Token de cambio de clave
+        reset_password_sent_at: Fecha de cambio de clave
+        remember_created_at: Remember Created At
+        current_sign_in_at: Ingreso actual
+        last_sign_in_at: Ultimo ingreso
+        current_sign_in_ip: IP Actual
+        last_sign_in_ip: Ultima IP
+        created_at: Creado el
+        updated_at: Actualizado el
+        companies: Companias
+        roles: Roles
+        authorizations: Autorizaciones

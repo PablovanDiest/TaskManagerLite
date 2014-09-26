@@ -1,0 +1,15 @@
+es-AR:
+  activerecord:
+    models:
+      customer: Cliente
+    attributes:
+      customer:
+        code: Código
+        name: Nombre
+        created_by_id: Creado por
+        created_at: Creado el
+        updated_by_id: Actualizado por
+        updated_at: Actualizado el
+        deleted_by_id: Borrado por
+        deleted_at: Borrado el
+        notes: Notas

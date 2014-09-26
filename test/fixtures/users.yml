@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  last_name: MyString
+  first_name: MyString
+  email: MyString
+  role: MyString
+  super_admin: false
+  created_by_id: 1
+  created_at: 2014-09-09 20:40:25
+  updated_by_id: 1
+  updated_at: 2014-09-09 20:40:25
+  deleted_by_id: 1
+  approved_at: 2014-09-09 20:40:25
+  approved_by_id: 1
+  deleted_at: 2014-09-09 20:40:25
+  notes: MyText
+
+two:
+  last_name: MyString
+  first_name: MyString
+  email: MyString
+  role: MyString
+  super_admin: false
+  created_by_id: 1
+  created_at: 2014-09-09 20:40:25
+  updated_by_id: 1
+  updated_at: 2014-09-09 20:40:25
+  deleted_by_id: 1
+  approved_at: 2014-09-09 20:40:25
+  approved_by_id: 1
+  deleted_at: 2014-09-09 20:40:25
+  notes: MyText

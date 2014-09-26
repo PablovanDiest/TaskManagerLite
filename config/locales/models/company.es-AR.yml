@@ -1,0 +1,25 @@
+es-AR:
+  activerecord:
+    models:
+      company: Empresa
+    attributes:
+      company:
+        code: Código
+        name: Razón Social
+        business_name: Nombre de fantasía
+        customer_id: Cliente
+        company_state_id: Estado de la Empresa
+        is_tax_payer: Aporta
+        contributor_number: Cuit
+        locality_name: Localidad
+        street_name: Calle
+        street_number: Número
+        floor: Piso
+        door: Depto
+        created_by_id: Creado por
+        created_at: Creado el
+        updated_by_id: Actualizado por
+        updated_at: Actualizado el
+        deleted_by_id: Borrado por
+        deleted_at: Borrado el
+        notes: Notas

@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  company_id: 
+  project_id: 
+  company_id: 
+  design_document: MyString
+  from: 2014-09-12 23:15:04
+  until: 2014-09-12 23:15:04
+  case: MyString
+  case_link: MyString
+  created_by_id: 1
+  created_at: 2014-09-12 23:15:04
+  updated_by_id: 1
+  updated_at: 2014-09-12 23:15:04
+  deleted_by_id: 1
+  deleted_at: 2014-09-12 23:15:04
+  notes: MyText
+
+two:
+  name: MyString
+  company_id: 
+  project_id: 
+  company_id: 
+  design_document: MyString
+  from: 2014-09-12 23:15:04
+  until: 2014-09-12 23:15:04
+  case: MyString
+  case_link: MyString
+  created_by_id: 1
+  created_at: 2014-09-12 23:15:04
+  updated_by_id: 1
+  updated_at: 2014-09-12 23:15:04
+  deleted_by_id: 1
+  deleted_at: 2014-09-12 23:15:04
+  notes: MyText

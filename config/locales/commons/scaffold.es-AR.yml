@@ -1,0 +1,46 @@
+es-AR:
+  flash:
+    actions:
+      index:
+        notice: No hay registros aún.
+      create:
+        notice: "%{resource_name} creado/a satisfactoriamente"
+      update:
+        notice: "%{resource_name} actualizado/a satisfactoriamente"
+        message: "%{resource_name} actualizado/a satisfactoriamente (2)"
+      destroy:
+        notice: "%{resource_name} eliminado/a satisfactoriamente"
+        error: "%{resource_name} no pudo ser eliminado/a"
+  scaffold:
+    notice:
+      updated: "%{item} actualizado correctamente"
+      destroyed: "%{item} borrado correctamente"
+      created: "%{item} creado satisfactoriamente"
+      female:
+        updated: "%{item} actualizada correctamente"
+        destroyed: "%{item} borrada correctamente"
+        created: "%{item} creada satisfactoriamente"
+    filters:
+      from_date: "Desde fecha"
+      to_date: "Hasta fecha"
+    actions_label: Acciones
+    actions:
+      show: mostrar
+      edit: editar
+      destroy: eliminar
+      destroy_confirm: Está seguro que desea eliminar el dato?
+      new: "Crear %{item}"
+      list: "listar %{item}"
+      back: volver
+      export: exportar a PDF
+      main: principal
+      filter_button: Filtrar
+      filter_title: Filtros
+      clear_filter: Limpiar filtro
+      cancel: Cancelar
+      print: Imprimir
+    errors:
+      message: Se han encontrado errores que impiden la grabacion.
+      required: es obligatorio
+      not_numeric: debe ser numérico
+

@@ -1,0 +1,57 @@
+es-AR:
+  errors:
+    messages:
+      expired: "expirado, por favor solicite una nueva"
+      not_found: "no encontrado"
+      already_confirmed: "ya esta confirmado, por favor pruebe ingresar nuevamente"
+      not_locked: "no esta lockeado"
+      not_saved:
+        one: "1 error prohibe este %{resource} desde la grabacion:"
+        other: "%{count} errores prohiben este %{resource} desde la grabacion:"
+  devise:
+    failure:
+      already_authenticated: 'Usted ya a ingresado.'
+      unauthenticated: 'Usted necesita ingresar o darse de alta para después continuar.'
+      unconfirmed: 'Usted debe confirmar su cuenta para después continuar.'
+      locked: 'Su cuenta esta bloqueada.'
+      invalid: 'email o clave invalida.'
+      invalid_token: 'Token de autenticacion invalido.'
+      timeout: 'Su sesion expiro, por favor ingrese nueva para continuar.'
+      inactive: 'Su cuenta aun no esta activada.'
+      user:
+        not_found_in_database: 'Usuario o clave inválida'
+    sessions:
+      link: 'Ingreso'
+      signed_in: 'Ingreso autorizado.'
+      signed_out: 'Salida satisfactoria.'
+      unauthenticated: 'Usted necesita ingresar o darse de alta para después continuar.'
+      unconfirmed: 'Usted debe confirmar su cuenta para después continuar.'
+      locked: 'Su cuenta esta bloqueada.'
+      invalid: 'email o clave inválida.'
+      invalid_token: 'Token de autenticación invalida.'
+      timeout: 'Su sesión expiro, por favor ingrese nuevament para continuar.'
+      inactive: 'Su cuenta aun no esta activada.'
+    passwords:
+      link: 'Olvido su clave?'
+      send_instructions: 'Usted recibira un email con instrucciones sobre como hacer para inicializar su clave en unos minutos.'
+      updated: 'Su clave ha cambiado satisfactoriamente. Usted ahora puede ingresar.'
+    confirmations:
+      link: "no ha recibido las instrucciones de confirmación?"
+      send_instructions: 'Usted recibira un email con instrucciones sobre como hacer para inicializar su clave en unos minutos.'
+      confirmed: 'Su clave ha cambiado satisfactoriamente. Usted ahora puede ingresar.'
+    registrations:
+      link: 'Salir'
+      signed_up: 'Ingreso autorizado.'
+      updated: 'Ha actualizado su cuenta correctamente.'
+      destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
+    unlocks:
+      link: "Didn't receive unlock instructions?"
+      send_instructions: 'You will receive an email with instructions about how to unlock your account in a few minutes.'
+      unlocked: 'Your account was successfully unlocked. You are now signed in.'
+    mailer:
+      confirmation_instructions:
+        subject: 'Instrucciones para confirmar'
+      reset_password_instructions:
+        subject: 'Instrucciones para inicializar su clave' 
+      unlock_instructions:
+        subject: 'Instrucciones para desbloquear'
